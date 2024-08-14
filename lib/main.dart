@@ -12,59 +12,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: GridView(
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 70),
-          children: [
-            Container(
-              color: Colors.red,
-            ),
-            Container(
-              color: Colors.blue,
-            ),
-            Container(
-              color: Colors.green,
-            ),
-            Container(
-              color: Colors.orange,
-            ),
-            Container(
-              color: Colors.red,
-            ),
-            Container(
-              color: Colors.blue,
-            ),
-            Container(
-              color: Colors.green,
-            ),
-            Container(
-              color: Colors.orange,
-            ),
-            Container(
-              color: Colors.orange,
-            ),
-            Container(
-              color: Colors.orange,
-            ),
-            Container(
-              color: Colors.orange,
-            ),
-            Container(
-              color: Colors.orange,
-            ),
-            Container(
-              color: Colors.red,
-            ),
-            Container(
-              color: Colors.blue,
-            ),
-            Container(
-              color: Colors.green,
-            ),
-            Container(
-              color: Colors.orange,
-            ),
-          ],
+        body: GridView.builder(
+          itemCount: 4,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10),
+          itemBuilder: (context, index) => Container(
+            color: Colors.yellow,
+          ),
         ),
       ),
     );
