@@ -13,12 +13,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: GridView.builder(
-          itemCount: 4,
+          itemCount: 100,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10),
-          itemBuilder: (context, index) => Container(
-            color: Colors.yellow,
+            crossAxisCount: 5,
           ),
+          itemBuilder: (context, index) =>
+              Container(color: index.isEven ? Colors.black : Colors.white),
         ),
       ),
     );
