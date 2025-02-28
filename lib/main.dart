@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         body: GridView.builder(
           itemCount: 100,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 6,
+            crossAxisCount: 5,
           ),
           itemBuilder: (context, index) =>
               Container(color: index.isEven ? Colors.black : Colors.white),
